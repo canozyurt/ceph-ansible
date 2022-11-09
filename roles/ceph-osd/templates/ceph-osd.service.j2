@@ -59,7 +59,7 @@ numactl \
   -e CLUSTER={{ cluster }} \
   -e TCMALLOC_MAX_TOTAL_THREAD_CACHE_BYTES={{ ceph_tcmalloc_max_total_thread_cache }} \
   -v /run/lvm/:/run/lvm/ \
-  -e CEPH_DAEMON=OSD_CEPH_VOLUME_ACTIVATE \
+  -e CEPH_DAEMON=osd_directory_single \
   -e CONTAINER_IMAGE={{ ceph_docker_registry }}/{{ ceph_docker_image }}:{{ ceph_docker_image_tag }} \
   -e OSD_ID=%i \
   --name=ceph-osd-%i \

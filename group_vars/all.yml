@@ -1,0 +1,19 @@
+containerized_deployment: true
+ceph_docker_registry: "192.168.126.1:5001"
+public_network: "192.168.129.0/24"
+cluster_network: "192.168.130.0/24"
+osd_auto_discovery: true
+
+monitor_interface: "eth4"
+radosgw_interface: "eth4"
+
+container_package_name: "docker-ce"
+container_service_name: "docker"
+container_binding_name: "python3-docker"
+
+ntp_service_enabled: false
+
+dashboard_admin_password: "password"
+grafana_admin_password: "password"
+
+yes_i_know: True
